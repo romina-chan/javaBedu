@@ -1,32 +1,30 @@
+package hospital;
+
 import java.util.Scanner;
+
 public class Principal {
     public static void main (String [] args){
+
         // Crear Scanner para leer desde consola
+        Scanner input = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
-// Crear mis objetos
-        // 1. La clase a la que pertenece el objeto
-        // 2. Identificador
-        // 3. new + constructuctor
-
-        // Crear un objeto de tipo Paciente
-        Paciente paciente = new Paciente();
+        // Crear los datos que vamos a pedir despues
+        Paciente p1 = new Paciente();
 
         // Pedir datos al usuario
         System.out.print("Ingrese el nombre del paciente: ");
+        p1.nombre = input.nextLine();
 
-        System.out.print("Ingrese la edad del paciente: ");
+        System.out.println("Ingrese la edad: ");
+        p1.edad = input.nextInt();
+        input.nextLine();
 
+        System.out.println("Ingrese número del expediente: ");
+        p1.numeroExpediente = input.nextLine();
 
-        System.out.print("Ingrese el número de expediente: ");
+        input.close();
 
-
-        // Mostrar información
-        System.out.println("\n📋 Información del paciente:");
-        paciente.mostrarInformacion();
-
-        // Cerrar Scanner
-        sc.close();
+        p1.mostrarInformacion();
     }
 
     }

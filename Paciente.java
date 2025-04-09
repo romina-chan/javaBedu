@@ -1,17 +1,16 @@
+package hospital;
+
 public class Paciente {
-    //Atributos
+    // Atributos
     String nombre;
     int edad;
-    String numeroExp;
+    String numeroExpediente;
 
-    //Métodos pra mostrar la información del paciente
-    /* 1. Tipo de regreso
-     * 2. Nombre
-     * 3. Parámetros (con su tipo) */
-
+    // Métodos
     public void mostrarInformacion() {
-        System.out.println("Paciente: " + nombre);
+        System.out.println("Información del paciente: ");
+        System.out.println("Nombre del paciente: " + nombre);
         System.out.println("Edad: " + edad);
-        System.out.println("Expediente: " + numeroExp);
+        System.out.println("Expediente: " + numeroExpediente);
     }
 }
